@@ -1,0 +1,4 @@
+.stack-work
+*.code-workspace
+test
+.vscode
