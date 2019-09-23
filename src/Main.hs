@@ -16,7 +16,10 @@ main = do
             img <- readImage (head args) :: IO (Either String (Image VS RGB Double))
             case img of
                 (Left a) -> putStrLn $ "Error in opening image: " ++ a ++ "\n"
-                (Right image) -> writeImage (toOutput $ head args) . dither $ image
+                (Right image) -> do
+                    putStrLn "Processing..."
+                    writeImage (toOutput $ head args) . dither $ image
+                    putStrLn "Done!"
                 
 toOutput :: String -> String
 toOutput str =
