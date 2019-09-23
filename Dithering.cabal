@@ -20,4 +20,6 @@ executable Dithering
   build-depends: 	     base >= 4.7 && < 5,
                        hip,
                        vector
-  other-modules:       Dither
+  other-modules:       Dither,
+                       Error,
+                       RoundPixel
